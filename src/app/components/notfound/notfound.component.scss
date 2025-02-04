@@ -1,0 +1,55 @@
+:host {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn{
+    width:100px;
+    height:100px;
+
+    background-color: orange;
+    border-radius: 50%;
+    &:hover{
+        background-color: black;
+        & i{
+            color:orange;
+        }
+    }
+  }
+
+  i{
+    transform:scale(2)
+  }
+
+  h1{
+    font-size:70px
+  }
+  
+  h2{
+    color:orange;
+    font-size:200px
+  }
+
+
+
+  @media(max-width:500px){
+    
+  h1{
+    font-size:50px
+  }
+  
+  h2{
+    font-size:150px
+  }
+
+  .btn{
+    width:70px;
+    height:70px;
+  }
+  i{
+    transform:scale(1.6)
+  }
+
+  }

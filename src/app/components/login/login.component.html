@@ -1,0 +1,54 @@
+<div class="form">
+  <form [formGroup]='logInForm' (ngSubmit)='handleLogin()'>
+
+    <div class='form-item'>
+        <label for='email'>Email</label>
+        <input class='form-control' type='email' id='email' formControlName='email' />
+    </div>
+
+    <div class='form-item'>
+        <label for='password'>Password</label>
+        <input class='form-control' type='password' id='password' formControlName='password' />
+
+        <a (click)="forgetPassword(logInForm.get('email')?.value)">Forget Your Password?</a>
+
+      </div>
+
+
+    <div class='login-btn'>
+      <button  class='main-btn' type='submit' [disabled] = 'logInForm.invalid'>
+        Log In 
+      </button>
+    </div>
+
+  </form>
+
+</div>
+
+
+<div class='error-containter'>
+
+  <div class='errors' *ngIf="logInForm.get('email')?.errors  && logInForm.get('email')?.touched">
+    <p *ngIf="logInForm.get('email')?.getError('email')">Invalid Email</p>
+    <p *ngIf="logInForm.get('email')?.getError('required')">Email Is Required</p>
+  </div>
+
+
+  <div class='errors' *ngIf="logInForm.get('password')?.errors  && logInForm.get('password')?.touched ">
+    <p *ngIf="logInForm.get('password')?.getError('required')">Password is required</p>
+    <p *ngIf="logInForm.get('password')?.getError('pattern')">Password should be at least 6 characters</p>
+  </div>
+
+
+
+  <div class='errors' *ngIf='doForget'>
+    <p>{{forgetPass}}</p>
+  </div>
+
+
+  <div class=error-exist  *ngIf='isExist'> 
+    <p>{{errorMsg}}</p>
+  </div>
+
+
+</div>

@@ -1,0 +1,47 @@
+<section class="containerr py-4  d-flex flex-column justify-content-center align-items-end text-center ">
+  <div class="content">
+    <h1>
+      Thank you for choosing
+      our website
+    </h1>
+    <h2>
+      Your order will be delivered
+      on time.
+    </h2>
+  </div>
+
+</section>
+
+
+
+<div class="home btn" routerLink ="/home">
+    <i class="fa-solid fa-house"></i>
+</div>
+
+
+<!------------------------------------------------------------------>
+<!------------------------------------------------------------------>
+
+<div class='back'>
+<section class='order container d-flex justify-content-center align-items-center'>
+
+  <table class="table shadow">
+    <thead>
+      <tr>
+        <th scope="col">isPaid</th>
+        <th scope="col">payment Method</th>
+        <th scope="col">Total Price:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr   *ngFor="let item of order">
+        <td>{{item.isPaid}}</td>
+        <td>{{item.paymentMethodType}}</td>
+        <td>{{item.totalOrderPrice}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</section>
+</div>

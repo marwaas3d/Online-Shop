@@ -1,0 +1,88 @@
+ <nav
+  class="navbar navbar-expand-sm navbar-light bg-light"
+>
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/online.logo.png" alt="">
+    </a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link  ps-2" routerLink="home" routerLinkActive="active-link">Home</a>
+        </li>
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link ps-2" routerLink="categories" routerLinkActive="active-link">Categories</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link ps-2" routerLink="brands" routerLinkActive="active-link">Brands</a>
+        </li>
+
+
+
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+
+     <!--whish list-->
+
+        <li class="nav-item">
+          <a class="nav-link position-relative" routerLink="wishlist">
+            <i class="fa-solid fa-heart"></i>
+          </a>
+        </li>
+
+      <!--account-->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link  position-relative" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-user"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/updatedata">Update User Info</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" routerLink="/update">Update Password</a></li>
+        </ul>
+      </li>
+
+
+
+      <!--cart-->
+        <li class="nav-item">
+          <a class="nav-link position-relative" routerLink="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge position-absolute   bg-info">{{cartCount}}</span>
+          </a>
+        </li>
+
+
+
+        <li class="nav-item" (click)="signOut()">
+          <span role="button" >Sign Out</span>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>

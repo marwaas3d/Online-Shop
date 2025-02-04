@@ -1,0 +1,152 @@
+:host {
+  background-image:url('https://marwaas3d.github.io/Online-Shop/assets/card.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  min-height: 600px;
+  margin-top: 100px;
+  background: #ff580082;
+  backdrop-filter: blur(20%);
+  border-radius: 40px;
+  padding: 30px;
+}
+
+.pay{
+  position:fixed;
+  top:145px;
+  right:0px;
+  transform:rotate(90deg);
+  border: none;
+  background-color: #ff5919;
+  color: white;
+  font-weight: bold;
+  width: 183px;
+  height: 42px;
+  border-bottom-right-radius: 20px;
+  &:hover
+{
+    background-color:white;
+    color:rgb(255 89 0);
+  }
+}
+
+h1,h2,h4,h3,p,span{
+  color:white;
+}
+
+.Empty {
+  color: white;
+  margin-top:20px;
+  position: relative;
+  animation: slideIn 1.5s linear forwards;
+}
+
+@keyframes slideIn {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+
+.removeItem{
+  background-color:white;
+  color:rgb(255 89 0);
+  &:hover{
+    color:white;
+    background-color:rgb(255 89 0);
+  }
+}
+
+.clearAll{
+  background-color: white;
+  color: rgb(255, 89, 0);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 14px;
+  font-weight: bold;
+  border: none;
+  &:hover{
+    background-color:rgb(255 89 0);
+    color:white;
+  }
+}
+
+
+
+
+.add i,.delete i{
+  transform: scale(1.5);
+  color:white;
+}
+.add,.delete{
+  all:unset;
+}
+
+
+
+button.btn.add:hover i ,
+button.btn.delete:hover i{
+  color: orange; 
+  cursor:pointer; 
+
+}
+
+
+
+img{
+  border-radius:40px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  section{
+    width:83% !important;
+  }
+  .col-md-10{
+    margin-top:30px;
+  }
+  
+  .clearAll{
+    width: 50px;
+    height: 50px;
+    color:transparent;
+    &:hover{
+      background-color:rgb(255 89 0);
+      color:transparent;
+      & i{
+        color:white;
+      }
+    }
+  
+    & i{
+      color: rgb(255, 89, 0);
+    }
+  }
+}
+@media (max-width: 875px) {
+  .pay{
+    right:-52px;
+  }  
+  
+}
+
+
+

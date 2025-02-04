@@ -1,0 +1,21 @@
+<section class='form'>
+  <form [formGroup]='checkForm' (ngSubmit)="handleForm()" class="w-100 mx-auto  p-2">
+    <div>
+      <label for="details">Details</label>
+      <!-- <input type="text" class="details" id="details" formControlName="details"> -->
+      <textarea class="details" formControlName="details" rows="1" ></textarea>
+    </div>
+
+    <div>
+      <label for="phone">Phone</label>
+      <input type="tel"  id="phone" formControlName="phone">
+    </div>
+
+    <div>
+      <label for="city">City</label>
+      <input type="text"  id="city" formControlName="city">
+    </div>
+
+    <button type="submit" class='btn main-btn'>CheckOut</button>
+  </form>
+</section>

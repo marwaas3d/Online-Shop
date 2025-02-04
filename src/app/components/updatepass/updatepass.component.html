@@ -1,0 +1,53 @@
+  <div class='form'  >
+    <form [formGroup]="updateForm" (ngSubmit)='updatePass()'>
+
+
+      <div class='form-item'>
+        <label  for="currentPassword">Current Password</label>
+        <input class='form-control' type="password" id="currentPassword" formControlName="currentPassword"/>
+      </div>
+
+      <div class='form-item'>
+        <label for="password">New Password</label>
+        <input class='form-control' type="password"  id="password" formControlName="password"/>
+      </div>
+
+      <div class='form-item'>
+        <label  for="rePassword">Re New Password</label>
+        <input class='form-control' type="password"  id="rePassword" formControlName="rePassword"/>
+      </div>
+
+
+      <div>
+        <button  class='update-btn' type='submit' [disabled] = 'updateForm.invalid'>
+          Update
+        </button>
+      </div>
+    
+    
+    </form>
+  </div>
+
+
+
+
+
+  <div class='error-containter'>
+
+    <div class='errors' *ngIf="updateForm.get('currentPassword')?.errors  && updateForm.get('currentPassword')?.touched">
+      <p *ngIf="updateForm.get('currentPassword')?.getError('required')">Current Password is required</p>
+    </div>
+  
+  
+    <div class='errors' *ngIf="updateForm.get('password')?.errors  && updateForm.get('password')?.touched ">
+      <p *ngIf="updateForm.get('password')?.getError('required')">New Password is required</p>
+      <p *ngIf="updateForm.get('password')?.getError('pattern')">New Password should be at least 6 characters</p>
+    </div>
+  
+  
+    <div class='errors' *ngIf="updateForm.get('rePassword')?.errors  && updateForm.get('rePassword')?.touched ">
+      <p *ngIf="updateForm.get('rePassword')?.getError('required')">Re New Password is required</p>
+      <p *ngIf="updateForm.get('rePassword')?.getError('pattern')">Re New Password should be at least 6 characters</p>
+    </div>
+  
+  </div>

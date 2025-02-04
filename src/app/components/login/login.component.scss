@@ -1,0 +1,176 @@
+:host {
+    background-image:url('https://marwaas3d.github.io/Online-Shop/assets/background-register.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border-radius .7s linear , border .7s linear;
+    &:hover{
+      border-top-right-radius: 100px;
+      border-bottom-left-radius: 100px;
+      border:2px solid #ff3c00;
+    }
+}
+
+
+label{
+  color:white;
+  margin-bottom:5px;
+  display:block;
+
+}
+input {
+  margin-bottom: 10px;
+  background-color: transparent;
+  caret-color:white;
+  color:white;
+
+  &:focus{
+    background-color: transparent;
+    outline-color: white;
+    border-color:white;
+  }
+}
+
+a{
+  cursor:pointer;
+  color:white !important;
+}
+
+.login-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  margin-top:20px;
+  transition:background-color,0.5s;
+  &:hover
+{
+    background-color:white;
+    color:  #ff3c00;
+  }
+}
+
+
+
+/********************************************************/
+
+.error-containter{
+  display:block;
+  position:absolute;
+  bottom:10px;
+  right:6px
+}
+.errors {
+  background-color: white;
+
+  color: #ff3c00;
+  width: 400px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  border-radius: 10px;
+
+  position: relative;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp .7s forwards ;
+
+  &:after{
+    position:absolute;
+    content:'';
+    width:99%;
+    height:4px;
+    background-color: #ff3c00;
+    bottom:0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+  }
+}
+
+@keyframes fadeInUp{
+  to{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+
+.error-exist{
+  background-color:  #ff3c00;
+
+  color: white;
+  width: 400px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  border-radius: 10px;
+
+  position: relative;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp .7s forwards ;
+
+  &:after{
+    position:absolute;
+    content:'';
+    width:99%;
+    height:4px;
+    background-color: white;
+    bottom:0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+  }
+
+}
+
+
+
+/****************************************************/
+
+
+@media(max-width:1200px){
+  .form {
+    width: 400px;
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+
+  .error-exist{
+    width:100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+    
+  .errors{
+    width:100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .error-containter{
+    margin-left:20px;
+    margin-right:20px;
+  }
+}

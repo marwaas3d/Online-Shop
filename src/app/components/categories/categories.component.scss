@@ -1,0 +1,75 @@
+:host{
+  background-image:url('https://marwaas3d.github.io/Online-Shop/assets/categories.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+
+
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+section{
+    margin-top:100px;
+    margin-right: 20px; 
+    margin-left: 20px;
+
+    min-height:100vh;
+    background-color:#af8b7e57;
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+}
+
+.row{
+  margin-top:20px ;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.card{
+  margin-bottom:40px;
+  height:475px;
+  background-color:transparent;
+  border:none;
+  position:relative;
+}
+
+.card-body{
+  position:absolute;
+  opacity: 0;
+  border-bottom-left-radius:40px;
+  border-bottom-right-radius:40px;
+  height:80px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:white;
+  color:#f37735;
+  cursor:pointer;
+}
+.card:hover{
+  .card-body{
+  bottom:-5px;
+  animation: appear 0.7s linear forwards; 
+
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1; 
+  }
+}
+
+
+
+img{
+  height:400px;
+  border-top-right-radius:40px;
+  border-top-left-radius:40px;
+  cursor:pointer;
+}
+
+
+

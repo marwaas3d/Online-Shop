@@ -1,0 +1,104 @@
+section{
+  margin-top:87px;
+  background-image:linear-gradient(to left, white, #ffc268 , #ffc268,  #ff9f10, #ff9f10, #ff601d, #ff601d);
+  border-radius:40px;
+  width:100%;
+  margin-bottom:40px;
+}
+
+img{
+  border-radius:40px;
+}
+
+h3,h5,.price{
+  color:white;
+  font-weight:bold;
+}
+p{
+  color:white;
+}
+.rating{
+  color:#ff5000;
+}
+
+.btn{
+  background-color:#F37735;
+  color:white;
+  outline:none;
+  border:none;
+  height:60px;
+  border-radius:20px;
+  margin-top: auto;
+  width:60%;
+  margin-top:60px;
+  font-weight:500;
+
+  &:hover{
+    background-color: white;
+    color: #F37735;
+  }
+}
+
+/********************************************************/
+.add-container{
+  display:block;
+  position:fixed;
+  bottom:10px;
+  right:6px;
+  z-index:200;
+}
+.add {
+  background-color: #ff2500;
+  color: white;
+  width: 400px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp .7s forwards , fadeOutDown 2s 3.3s forwards;
+  &:after{
+    position:absolute;
+    content:'';
+    width:99%;
+    height:4px;
+    background-color: white;
+    bottom:0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+  }
+}
+
+@keyframes fadeInUp{
+  to{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeOutDown {
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+
+@media (max-width: 991px) and (min-width: 767px) {
+  img {
+    height: 300px;
+    width:50%;
+  }
+}
+
+@media  (min-width: 767px) and (max-width: 998px) {
+  img {
+    height: 250px;
+    margin-right:200px
+  }
+}

@@ -1,0 +1,59 @@
+<div class="form">
+    <form [formGroup]='update' (ngSubmit)='updateDataInfo()'>
+
+        <div class='form-item'>
+            <label  for="name">Name</label>
+            <input class='form-control' type="text" id="name" formControlName="name"/>
+          </div>
+
+        <div class='form-item'>
+            <label  for="email">Email</label>
+            <input class='form-control' type="text" id="email" formControlName="email"/>
+          </div>
+
+        <div class='form-item'>
+            <label  for="phone">Phone</label>
+            <input class='form-control' type="tel" id="phone" formControlName="phone"/>
+          </div>
+
+          <div>
+            <button  class='update-btn' type='submit' [disabled] = 'update.invalid'>
+              Update
+            </button>
+          </div>
+
+    </form>
+</div>
+
+
+<div class='error-containter'>
+
+  <div class='errors' *ngIf="update.get('name')?.errors && (update.get('name')?.touched || update.get('name')?.value.length > 0)">
+    <p *ngIf="update.get('name')?.getError('required')">The Name Is Required</p>
+    <p *ngIf="update.get('name')?.getError('minlength')">The Name should be at least 3 characters</p>
+    <p *ngIf="update.get('name')?.getError('maxlength')">The Name should be at Most 20 characters</p>
+  </div>
+  
+  <div class='errors' *ngIf="update.get('email')?.errors && (update.get('email')?.touched || update.get('email')?.value.length > 0)">
+    <p *ngIf="update.get('email')?.getError('email')">Invalid Email</p>
+    <p *ngIf="update.get('email')?.getError('required')">Email Is Required</p>
+  </div>
+
+
+
+  <div class='errors' *ngIf="update.get('phone')?.errors && (update.get('phone')?.touched || update.get('phone')?.value.length > 0)">
+    <p *ngIf="update.get('phone')?.getError('pattern')">Only Egyptian Phone Number</p>
+    <p *ngIf="update.get('phone')?.getError('required')">Phone Number Is Required</p>
+  </div>
+
+
+  <div class='errors' *ngIf="isCorrect">
+    <p >Your Data Is Updated</p>
+  </div>
+
+  <div class='errors' *ngIf="isError">
+    <p >{{Error}}</p>
+  </div>
+
+
+</div>

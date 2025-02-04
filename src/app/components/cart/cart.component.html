@@ -1,0 +1,58 @@
+<section class="w-75 mx-auto shadow">
+  <div class="d-flex justify-content-between align-items-center ">
+    <div> 
+      <h1>Cart <i class="fa-solid fa-heart"></i></h1>
+      <h2><span>Total Price:</span> {{cartData.totalCartPrice}} <span>EGP</span></h2>
+      <div class="Empty" *ngIf="isEmpty">The Cart Is Empty , Please Add  Items</div>
+    </div>
+
+    <div>
+      <button class="clearAll" (click)="clearAll()"><i class="fa-solid fa-trash"></i> Clear All</button>
+    </div>
+  </div>
+
+
+
+
+
+   <div class='row py-4  align-items-center' *ngFor="let item of cartData.products">
+
+    <div class="col-md-2">
+      <img class="w-100" [src]="item.product.imageCover" [alt]="item.product.title">
+    </div>
+
+
+    <div class="col-md-10 d-flex justify-content-between align-items-center ">
+      <div>
+        <h4 class="h5">{{item.product.title}}</h4>
+        <h3 class="h6">- {{item.product.brand.name}}</h3>
+        <p>Price: {{item.price}} EGP</p>
+        <button class="btn removeItem" (click)="deleteItem(item.product._id)"><i class="fa-solid fa-trash"></i> Remove Item</button>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <button class="btn add mr-3 " (click)="updateCount(item.product._id , item.count+1)">
+          <i class="fa-solid fa-circle-plus "></i>
+           
+        </button>
+
+        <span class="text-white font-weight-bold mx-3"> {{item.count}} </span>
+
+        <button class="btn delete ml-3 " (click)="updateCount(item.product._id , item.count-1)">
+          <i class="fa-solid fa-circle-minus" ></i>
+           
+        </button>
+
+      </div>  
+
+
+
+    </div>
+  </div>
+
+   <button class="pay" (click)="pay()">Online Payment  <i class="fa-solid fa-wallet"></i></button> 
+  </section>
+
+
+
+

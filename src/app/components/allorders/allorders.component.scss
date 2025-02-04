@@ -1,0 +1,134 @@
+.containerr{
+  background-image:url('https://marwaas3d.github.io/Online-Shop/assets/allorders.png');
+  background-repeat:no-repeat;
+  background-size:  cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+.home{
+  position:fixed;
+  top:20px;
+  right:30px;
+
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color:#f37735;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+i{
+  transform: scale(2.5);
+  -webkit-transform: scale(2.5);
+  -moz-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  -o-transform: scale(2.5);
+}
+
+h1,h2{
+  font-weight:bold;
+  color:#f37735;
+  max-width:33rem;
+}
+.content{
+  margin-right:100px;
+}
+
+
+/************************************************************************************************/
+
+.back{
+  min-height:100vh;
+  background-image: linear-gradient(to right , #f37735 , #ffbb83);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.table{
+  margin-top:50px;
+  margin-bottom:50px;
+
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+th{
+  color: #f37735;
+  padding-left:70px;
+  padding-bottom:20px;
+}
+
+
+tr{
+  height:80px;
+}
+
+td{
+  padding-left:70px;
+  padding-top:30px;
+  color:orange;
+}
+
+
+
+
+
+
+@media(max-width:990px){
+  .content{
+    width:fit-content;
+    height:fit-content;
+    padding:30px;
+    background-color:#f5caaa;
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+}
+
+.content{
+  margin-right:20px;
+}
+
+
+.home{
+  width:70px;
+  height:70px;
+}
+
+i{
+  transform: scale(1.8);
+}
+}
+
+
+@media(max-width:500px){
+  .order {
+    overflow-x: auto; /* يتيح تمرير الجدول إذا كان واسعًا */
+  }
+
+  .order .table {
+    width: 100% !important;
+    max-width: 98% !important;
+    table-layout: fixed; /* يجبر الخلايا على التكيف مع الحجم */
+  }
+
+
+th,td{
+  padding-left: 32px !important;
+}
+}
+

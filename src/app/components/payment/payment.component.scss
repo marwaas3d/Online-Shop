@@ -1,0 +1,86 @@
+:host {
+  background-image:url('https://marwaas3d.github.io/Online-Shop/assets/card.png');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+
+}
+
+
+
+.form {
+  width: 30%;
+  background-color: #ffffff8a;
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-radius .7s linear , border .7s linear;
+  border-radius: 20px;
+  box-shadow:0px 0px 15px 10px rgba(243, 119, 53, 0.5215686275);
+
+}
+
+.details{
+    height:90px;
+    width: 100%;
+    min-width: 150px;
+    max-width: 100%;
+    transition: width 0.2s ease-in-out;
+    border-radius:10px;
+    margin-bottom:20px;
+    background:none;
+    border: 1px solid #ff5311;
+    color:white;
+    padding:8px;
+    &:focus{
+      outline:none;
+    }
+  }
+
+label{
+  margin-bottom:10px;
+  color:#ff5311;
+  font-weight:500;
+}
+input{
+  width:100%;
+  height:40px;
+  border-radius:10px;
+  margin-bottom:20px;
+  background:none;
+  border: 1px solid #ff5311;
+  color:white;
+  display:block;
+  padding:8px;
+
+  &:hover{
+    background-color: transparent;
+  }
+  &:focus{
+    outline:none;
+  }
+}
+
+.main-btn{
+  &:hover{
+    background-color:white;
+    color: #F37735;
+  }
+}
+
+@media(max-width:950px){
+  .form {
+    width: 400px;
+    margin-left:10px;
+    margin-right:10px;
+    padding:20px;
+  }
+}

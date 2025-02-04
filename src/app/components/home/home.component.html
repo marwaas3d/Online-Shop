@@ -1,0 +1,93 @@
+  <div class='back'>
+    <div class="greeting">
+        <h2>{{welcomeMsg}}</h2>
+    </div>
+  </div>
+
+
+  <section class="categories">
+  <h3 class="text-main">Categories</h3>
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of categories">
+      <ng-template carouselSlide>
+        <img height="300px" [src]="slide.image" [alt]="slide.name" [title]="slide.name">
+        <div class="name" routerLink="/categories">
+          <h3 class="h6">{{slide.name}}</h3>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>
+
+
+
+<section class="my-5">
+  <div class="search">
+
+    <div class="input-group">
+      <input type="search" class="form-control rounded find"
+      aria-label="Search" aria-describedby="search-addon" [(ngModel)]='term' />
+
+      <p class="placeholderr">Search...</p>
+    </div>
+
+    </div>
+</section>
+
+
+
+<section>
+    <div class="row g-4">
+      <div *ngFor="let item of products | search:term " class="col-sm-6 col-md-4 custom-col">
+
+
+
+        <div class='card p-3'>
+
+
+            <img [src]="item.imageCover" alt='' class='img-product' [routerLink]="['/details' , item._id]">
+            <div class='productDetails'>
+
+
+              <div class='d-flex justify-content-between align-items-center'>
+                <h4 class="h6">{{item.category.name}}</h4>
+
+                <span>
+                  <i class="fa-solid fa-heart" (click)='addWish(item._id)'></i>
+                </span>
+              </div>
+
+
+                <h3 class="h6"  [routerLink]="['/details' , item._id]">{{item.title | cutText}}</h3>
+
+
+                  <div class='d-flex justify-content-between align-items-center price'>
+                    <span>{{ item.price | currency: 'EGP   '}}</span>
+                    <span><i class="fa-solid fa-star"></i>{{item.ratingsAverage}}</span>
+                  </div>
+            </div>
+
+
+          <button class="add-cart" (click)='addProduct(item._id)'><i class="fa-solid fa-cart-shopping"></i>  Add To Cart</button>
+
+        </div>
+
+        </div>
+      </div>
+
+  </section>
+
+  <div class='add-container'>
+
+    <div class='add' *ngIf="isAdded">
+      <p>{{addedToCart}}</p>
+    </div>
+
+    <div class='add' *ngIf="isWish">
+      <p>{{wishMsg}}</p>
+    </div>
+
+  </div>
+
+
+

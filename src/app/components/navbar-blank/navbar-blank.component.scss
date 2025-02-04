@@ -1,0 +1,48 @@
+
+.navbar-brand img {
+    width: 112px;
+    height: 48px;
+}
+
+nav{
+    position:fixed;
+    top:0px;
+    z-index:200;
+    width:100%;
+}
+
+.fa-cart-shopping,
+.fa-user{
+    transform:scale(1.8);
+    margin-right:13px;
+    color: #F37735;
+
+    &:hover{
+        color: #ff955d;
+    }
+}
+
+.dropdown-item:focus {
+  background-color:  #F37735;
+  color:white
+}
+
+.badge{
+  left: 18.2px;
+  top: -4px;
+}
+
+
+::ng-deep .dropdown-menu li a{
+  color:#fa8d17;
+  &:hover{
+    color:#fa8d17;
+  }
+}
+
+.fa-heart{
+  transform:scale(1.7);
+  color:  #F37735;
+  margin-right:14px;
+}
+

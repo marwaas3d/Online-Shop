@@ -1,0 +1,157 @@
+:host {
+  background-image:url('https://marwaas3d.github.io/Online-Shop/assets/update.jpeg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  background-color: #e2472cd9;
+    padding: 50px;
+    border-radius: 50px;
+    min-height:60%;
+    width:30%;
+}
+
+label{
+  color:white;
+  margin-bottom:10px;
+}
+
+input{
+  margin-bottom:20px;
+  color: #e2472cd9;
+}
+
+.update-btn{
+  background-color:white;
+  color: #e2472cd9;
+  width: 90px;
+  height: 36px;
+  font-weight: 600;
+  border-radius: 18px;
+  margin-top:10px;
+  border:none;
+  outline:none;
+
+  &:hover{
+    color:white;
+    background-color: #e2472cd9;
+    cursor:pointer;
+  }
+}
+
+
+
+/********************************************************/
+
+.error-containter{
+    display:block;
+    position:absolute;
+    bottom:10px;
+    right:6px
+  }
+  .errors {
+    background-color: white;
+  
+    color: #ff3c00;
+    width: 400px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    border-radius: 10px;
+  
+    position: relative;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp .7s forwards , fadeOutDown 2s 3.3s forwards;;
+  
+    &:after{
+      position:absolute;
+      content:'';
+      width:99%;
+      height:4px;
+      background-color: #ff3c00;
+      bottom:0px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+  
+    }
+  }
+  
+  @keyframes fadeInUp{
+    to{
+      opacity:1;
+      transform: translateY(0px);
+    }
+  }
+  @keyframes fadeOutDown {
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  .error-exist{
+    background-color:  #ff3c00;
+  
+    color: white;
+    width: 400px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    border-radius: 10px;
+  
+    position: relative;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp .7s forwards ;
+  
+    &:after{
+      position:absolute;
+      content:'';
+      width:99%;
+      height:4px;
+      background-color: white;
+      bottom:0px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+  
+    }
+  
+  }
+  
+@media(max-width:1200px){
+    .form {
+      width: 400px;
+      margin-left:20px;
+      margin-right:20px;
+    }
+  
+  
+    .error-exist{
+      width:100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  
+      
+    .errors{
+      width:100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+    .error-containter{
+      margin-left:20px;
+      margin-right:20px;
+    }
+  }
